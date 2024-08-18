@@ -5,6 +5,7 @@ import Item from "./Item";
 interface Props{
     tasks: Task[];
     setTasks: Dispatch<SetStateAction<Task[]>>;
+    key?:number
 }
 
 const Todolist:React.FC<Props> = ({tasks, setTasks}: Props) => {

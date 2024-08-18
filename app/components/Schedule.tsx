@@ -5,6 +5,7 @@ import { Task } from "./taskItem"
 
 interface Props {
     tasks:Task[]
+    key?:number
 }
 
 
