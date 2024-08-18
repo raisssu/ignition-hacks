@@ -5,7 +5,6 @@ import Item from "./Item";
 interface Props{
     tasks: Task[];
     setTasks: Dispatch<SetStateAction<Task[]>>;
-    key?:number
 }
 
 const Todolist:React.FC<Props> = ({tasks, setTasks}: Props) => {
@@ -14,7 +13,7 @@ const Todolist:React.FC<Props> = ({tasks, setTasks}: Props) => {
         {
             tasks.map(task => (
                 // <li className="flex justify-evenly w-9/10 flex-wrap">{task.time}</li>
-                <div>
+                <div key={task.id}>
                     <Item task={task} key={task.id} tasks={tasks} setTasks={setTasks} />
                 </div>
             )
